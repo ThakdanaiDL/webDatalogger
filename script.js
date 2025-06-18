@@ -9,8 +9,7 @@ function callUrlInBackground() {
             return response.text();
         })
         .then(data => {
-            console.log("URL ถูกเรียกสำเร็จในเบื้องหลัง:", data);
-            // ถ้าคุณอยากให้มี alert บอกว่าทำงานเสร็จแล้ว ก็เพิ่มตรงนี้ได้
+            console.log("URL ถูกเรียกสำเร็จ:", data);
             alert("URL ถูกเรียกในเบื้องหลังแล้ว!");
         })
         .catch(error => {
@@ -19,8 +18,7 @@ function callUrlInBackground() {
         });
 }
 
-// ฟังก์ชันเดิมที่คุณมี แต่เปลี่ยนไปเรียก callUrlInBackground แทน
 function showAlert() {
-    alert("คุณคลิกปุ่มแล้ว!"); // ข้อความแจ้งเตือนเดิม (ยังคงอยู่ได้)
-    callUrlInBackground(); // เรียกฟังก์ชันที่ส่งคำขอแบบเบื้องหลัง
+    // alert("คุณคลิกปุ่มแล้ว!"); 
+    callUrlInBackground(); 
 }
